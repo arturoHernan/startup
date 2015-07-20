@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset=utf-8 /> 
+		<title>Adobe Developer Center: HTML5 Audio Sample</title>
+		<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<style>
+			figure { display:block; }
+			figcaption { font-weight:bold; }
+		</style>
+	</head>
+	<body>
+		<figure>
+			<figcaption>Ogg Audio</figcaption>
+			<audio src="myAudio.ogg" autoplay controls></audio>
+		</figure>
+		<figure>
+			<figcaption>Ogg and MP3 Audio</figcaption>
+			<audio autoplay controls>
+				<source src="myAudio.ogg" type="audio/ogg">
+				<source src="myAudio.mp3" type="audio/mp3">
+			</audio>
+		</figure>
+		<figure>
+			<figcaption>Ogg and MP3 Audio with Flash and Download Link Fallback</figcaption>
+			<audio autoplay controls>
+				<source src="myAudio.ogg" type="audio/ogg">
+				<source src="myAudio.mp3" type="audio/mp3">
+				<object type="application/x-shockwave-flash" data="player.swf?audioUrl=myAudio.mp3&autoPlay=true" height="27" width="320">
+					<param name="movie" value="player.swf?audioUrl=myAudio.mp3&autoPlay=true">
+				</object>
+				<a href="myAudio.mp3">Download the audio file</a>
+			</audio>
+		</figure>
+	</body>
+</html>
